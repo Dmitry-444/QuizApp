@@ -31,5 +31,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, InformationMenuActivity::class.java)
             startActivity(intent)
         }
+
+        iv_map.setOnClickListener(){
+            val intent = Intent(this, MapsActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

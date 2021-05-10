@@ -7,26 +7,27 @@
     app:layoutDescription="@xml/information_menu_activity_scene"
     tools:context=".InformationMenuActivity">
 
-    <ImageView
+    <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
         android:id="@+id/iv_title"
         android:layout_width="0dp"
         android:layout_height="255dp"
-        android:src="@drawable/ic_icon"
+        android:src="@drawable/ic_map_of_states"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
         android:text="@string/info"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,23 +45,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_title">
 
-        <LinearLayout
-            android:id="@+id/ll_main"
+        <TextView
+            android:id="@+id/tv_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="fill_vertical"
-            android:orientation="vertical">
+            android:text="@string/lorem"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
 
-            <TextView
-                android:id="@+id/tv_info"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/lorem"
-                android:textSize="15sp" />
-
-        </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btn_to_states"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_to_array"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/scrollView"
+        tools:layout_editor_absoluteX="161dp" />
 
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
